@@ -106,7 +106,7 @@
 		}
 		eve+='<div class="container" style="width: 100%;padding-bottom: 2%;"><div class="col-md-4"><h1>';
 		eve+=events[i].startTime+' To '+events[i].endTime+'<br />'+events[i].venue;
-		eve+='</h1></div><div class="col-md-4" style="text-align: center;"><h1 style="font-size: 60px;">'+events[i].eventName+'</h1></div><div class="col-md-4"><h1>Fees:- '+fe+'</h1></div></div><div class="container" style="width: 100%;padding-bottom: 2%"><div class="col-md-4"><img src="images/jhalak.jpg" class="img-responsive"></div><div class="col-md-4">'+events[i].description+'</div><div class="col-md-4">Rules:<br>'+events[i].rules+'</div></div><div class="container"><div class="col-md-12"><button class="register-button"  data-toggle="modal" data-target="#myModal" data-id="'+events[i]._id+'" data-whatever="Snaptastic">Register</button></div></div><hr style="margin-left: -10%;width:112%">';
+		eve+='</h1></div><div class="col-md-4" style="text-align: center;"><h1 style="font-size: 60px;">'+events[i].eventName+'</h1></div><div class="col-md-4"><h1>Fees:- '+fe+'</h1></div></div><div class="container" style="width: 100%;padding-bottom: 2%"><div class="col-md-4"><img src="images/event/technical.jpg" class="img-responsive"></div><div class="col-md-4">'+events[i].description+'</div><div class="col-md-4">Rules:<br>'+events[i].rules+'</div></div><div class="container"><div class="col-md-12"><button class="register-button"  data-toggle="modal" data-target="#myModal" data-id="'+events[i]._id+'" data-whatever="Snaptastic">Register</button></div></div><hr style="margin-left: -10%;width:112%">';
 	}  
 
 	document.getElementById("data").innerHTML=eve;      
@@ -367,8 +367,8 @@ function ok()
 					</div>
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav navbar-right" style="transform:translateX(600px);transition: all .5s">                 
-							<li class="active"><a href="index.html" onclick="location.replace('index.html'),'_top'">Home</a></li>                       
-							<li class="scroll"><a href="#events">Technical Shows</a></li>
+							<li class="scroll"><a href="index.html" onclick="location.replace('index.html'),'_top'">Home</a></li>                       
+							<li class="scroll active"><a href="#events">Technical Shows</a></li>
 							<li class="scroll"><a href="index.html#contact">Sponsors</a></li>        
 							<li class="scroll"><a href="team.html">The Team</a></li>       
 						</ul>

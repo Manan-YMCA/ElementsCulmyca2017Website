@@ -161,10 +161,14 @@ h2 {
 }
 
 .navbar-right .active a,
-.navbar-right li a:focus,
 .navbar-right li a:hover {
     background-color: #fff;
     color: #16728f
+}
+
+.navbar-right li a:focus {
+    background-color: #4052ad;
+    color:white;
 }
 
 .fixed-menu {
@@ -623,5 +627,17 @@ h2 {
     }
     25% {
         transform: rotateZ(5deg)
+    }
+
+ @keyframes nav {
+    0%,
+    50% {
+        background-color: #4052ad;
+    }
+    15%,
+    35% {
+        background-color: red;    }
+    25% {
+        background-color: #4052ad;
     }
 }
