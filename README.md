@@ -1,4 +1,21 @@
-# ElementsCulmyca2017Website
-Offical Repository For Elements Culmyca 2017 Fest Website
-![alt tag](https://camo.githubusercontent.com/ef05c997349f0b90688c0a15e9ffaa0f4054fe46/687474703a2f2f692e696d6775722e636f6d2f644862305658792e706e67)
-Will Eat YOUR CAT
+# ElementsCulmyca.Com | [Elements Culmyca] 2017 
+ [Elements Culmyca]: <http://elementsculmyca.com>
+#### Annual Cultural Cum Technical Fest Of YMCA University Of Science And Technology, Faridabad
+
+```sh 
+Features
+1. Displays detailed list of all events
+2. Registration form to register for all events.
+3. Details of sponsors.
+4. Details of team.
+```
+
+#### Technologies Used
+````
+- HTML
+- CSS
+- Bootstrap CSS
+- Javascript, JQuery
+````
+
+
