@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,200,700);
 
 * {
-	border: px solid red;
+	border: 1px solid red;
 }
 
 .main-nav,
@@ -471,7 +471,7 @@ h2 {
 }
 
 .twitter {
-    padding: 8% 8% 8% 10%
+    padding: 8% 8% 8% 10%;
 }
 
 #contact {
@@ -640,4 +640,8 @@ h2 {
     25% {
         background-color: #4052ad;
     }
+}
+
+.hidden {
+	visibility: hidden;
 }

@@ -35,7 +35,18 @@ jQuery(function($) {'use strict',
 		}
 	}
 
+	function arrowToggle()
+	{
+		var windowWidth = $(window).width();
+
+		if(windowWidth < 500 ){
+			$('p.right').addClass('hidden');
+			$('p.left').addClass('hidden');	
+		}
+	}
+
 	menuToggle();
+	arrowToggle();
 	
 	
 	// Carousel Auto Slide Off
