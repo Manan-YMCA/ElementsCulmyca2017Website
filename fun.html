@@ -98,15 +98,39 @@
 	for(var i=0; i<events.length; i++)
 	{
 		var f=events[i].fee;
-		if(f=="No")
+		if(f=="0")
 		var fe="FREE";
 		else
 		{
-			var fe= f.substring(5,f.length-1); 
+			var fe=f;
 		}
+		var type;
+		if(events[i].type=='individual')
+			type='person';
+		else if(events[i].type=='team')
+			type='team';
+		else 
+			type='presentation';
+
+
 		eve+='<div class="container" style="width: 100%;padding-bottom: 2%;"><div class="col-md-4"><h1>';
 		eve+=events[i].startTime+' To '+events[i].endTime+'<br />'+events[i].venue;
-		eve+='</h1></div><div class="col-md-4" style="text-align: center;"><h1 style="font-size: 60px;">'+events[i].eventName+'</h1></div><div class="col-md-4"><h1>Fees:- '+fe+'</h1></div></div><div class="container" style="width: 100%;padding-bottom: 2%"><div class="col-md-4"><img src="images/event/fun2.jpg" class="img-responsive"></div><div class="col-md-4">'+events[i].description+'</div><div class="col-md-4">Rules:<br>'+events[i].rules+'</div></div><div class="container"><div class="col-md-12"><button class="register-button"  data-toggle="modal" data-target="#myModal" data-id="'+events[i]._id+'" data-whatever="Snaptastic">Register</button></div></div><hr style="margin-left: -10%;width:112%">';
+		eve+='</h1></div><div class="col-md-4" style="text-align: center;"><h1 style="font-size: 60px;">'+events[i].eventName+'</h1></div><div class="col-md-4">';
+		if(type!='presentation')
+		{eve+='<h1>Fees:- '+fe;
+		if(fe!="FREE")
+		{
+			eve+=' per '+type;
+		}
+		}
+		eve+='</h1></div></div><div class="container" style="width: 100%;padding-bottom: 2%"><div class="col-md-4"><img src="images/eventpics/'+events[i].eventName+'.jpg" class="img-responsive"></div><div class="col-md-4">'+events[i].description+'</div><div class="col-md-4">Rules:<br>'+events[i].rules+'</div></div><div class="container"><div class="col-md-12">';
+		if(type!='presentation')
+		{if(type=='team')
+			eve+='<button class="register-button"  data-toggle="modal" data-target="#myModal" data-id="'+events[i]._id+'" data-whatever="This is a team event. Enter the name of all your team members seperated by comma.">Register</button>';
+			else 
+			eve+='<button class="register-button"  data-toggle="modal" data-target="#myModal" data-id="'+events[i]._id+'" data-whatever="">Register</button>';
+		}
+		eve+='</div></div><hr style="margin-left: -10%;width:112%">';
 
 
 	}   
@@ -470,6 +494,7 @@ background-attachment: fixed;background-repeat: repeat;">
 							</div>
 							<div class="form-group">
 								<label for="Name">Full Name</label>
+								<div class="line"></div>
 								<input type="text" class="form-control" placeholder="Full Name" name="fullname" id="fullname" style="width: 50%" required="true">
 							</div>
 							<div class="form-group">
@@ -599,7 +624,7 @@ background-attachment: fixed;background-repeat: repeat;">
   	// Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
   	var modal = $(this)
   	modal.find('.modal-title').html('Register:- <br> Fill out this form')
-  	modal.find('.modal-body input').val(recipient)
+  	modal.find('.line').html(recipient)
   });
 	$('.online-radio').focus(function() {
 		$('.transaction').css({"display":"initial"})
