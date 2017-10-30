@@ -4,7 +4,7 @@
 
 ```sh 
 Features
-1. Displays detailed list of all events
+1. Displays detailed list of all eventsnzd;jals j;lkasjladjvplsjg;lan
 2. Registration form to register for all events.
 3. Details of sponsors.
 4. Details of team.
